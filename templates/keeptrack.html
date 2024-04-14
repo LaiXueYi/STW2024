@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Keeping track</title>
+    <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Now, let's keep track of the time you spend on study and play</h1>
+    <table border='1'>
+      <tr>
+        <th>Subject</td>
+        <th>Time spent</td>
+        <th>Entertainment</td>
+        <th>Time spent</td>
+      </tr>
+      {% for rec in records %}
+      <tr>
+        <td>{{ rec[0] }}</td>
+        <td>{{ rec[1] }}</td>
+        <td>{{ rec[2] }}</td>
+        <td>{{ rec[3] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    {{ reminder[0] }}<br>
+    <br>
+    <form action="/keeptrack" method="POST">
+      <label for="subject">What subject did you study?</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject"><br>
+      
+      <label for="study">Study time:</label>
+      <input type="text" id="study" name="study" step="1"><br>
+      
+      <label for="game">What did you do during your free time?</label>
+      <input type="text" id="game" name="game"><br>
+      
+      <label for="play">Play time:</label>
+      <input type="text" id="play" name="play" step="1"><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+    <a href="{{ url_for('index') }}">Go back to home page</a>
+  </body>
+</html>

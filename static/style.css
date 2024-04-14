@@ -1,0 +1,9 @@
+h1 {
+  color: blue;
+  font-family: 'Roboto', sans-serif;
+}
+
+table, tr, td {
+  border: 1px solid-black;
+  border-collapse: collapse;
+}

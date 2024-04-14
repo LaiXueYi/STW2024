@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>WELCOME to my WEBAPP</h1>
+    <p>This webapp will help you in building your work-life balance</p>
+    <p>Work-life balance can be the solution we are searching for, but only when we know what “work-life balance” actually means, and how to implement it.</p>
+    
+    <h2>What is work-life balance?</h2>
+    <p>Work-life balance has been a topic of intense discussion for decades.</p>
+    <p>There are many challenges we face in life and these challenges will cause pressure, stress and brunout.</p>
+    <p>Many students believe that work-life balance is having equal time of study and play.</p>
+    <p>However, for students like us in JC, it is unrealistic to play as much as we study.</p>
+    <p>Therefore, we must create a plan for ourself to ensure we don't study too much or play too much.</p>
+
+    <h3>Now, let's create a study plan</h3>
+    <a href='{{ url_for("improve") }}'>I already have a study plan.</a><br>
+    <a href="{{ url_for('create') }}">I do not have a study plan yet.</a><br>
+    <a href='{{ url_for("reco") }}'>My recomendations.</a><br>
+    <a href='{{ url_for("keeptrack") }}'>Keeping track of my study time.</a>
+    
+  </body>
+</html>

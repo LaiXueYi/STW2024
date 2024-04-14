@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>create</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>It's still not too late to start creating one plan right now!</h1>
+    <p>This webapp can give you recomendations to help you in creating your plan. But first, you need to answer some questions.</p>
+    <form action="/create" method="post">
+      
+        <p>When do you have cca?</p>
+        <input type="radio" id="ccaeven" name="ccaeven" value="ccaeven">
+        <label for="ccaeven">Even days</label><br>
+
+        <input type="radio" id="ccaodd" name="ccaodd" value="ccaodd">
+        <label for="ccaodd">Odd days</label`><br>
+
+        <p>Is you cca a sports cca?</p>
+        <input type="radio" id="yes" name="answer" value="yes">
+        <label for="yes">Yes</label><br>
+      
+        <input type="radio" id="no" name="answer" value="no">
+        <label for="no">No</label><br><br>
+
+        <p>What do you do to relieve stress?</p>
+        <input type="radio" id="phone" name="phone" value="phone">
+        <label for="phone">Use my phone</label><br><br>
+  
+        <input type="radio" id="sport" name="sport" value="sport">
+        <label for="sport">I play sports</label><br><br>
+      
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{{ url_for('index') }}">Go back to home page</a>
+  </body>
+</html>

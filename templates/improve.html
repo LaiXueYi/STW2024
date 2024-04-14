@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>improve</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>WOW, its great that you have a study plan</h1>
+    <form action="/improve" method="post">
+        <p>Is your current study plan effective to you?</p>
+        <input type="radio" id="yes" name="answer" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="answer" value="no">
+        <label for="no">No</label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{{ url_for('index') }}">Go back to home page</a>
+  </body>
+</html>
